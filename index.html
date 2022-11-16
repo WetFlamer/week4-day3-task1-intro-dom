@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+</body>
+<script>
+const div = document.createElement('div')
+const text = document.createElement('text')
+// DIV 
+div.style.border = '1px solid red'
+div.style.borderRadius = '10px'
+div.style.height = '90px'
+div.style.width = '340px'
+div.style.margin = 'auto'
+div.style.display = 'flex'
+div.style.alignItems = 'center'
+div.style.padding = '10px'
+text.textContent = 'Lorem ipsum, dolor sit amet consectetur, adipisicing, elit. Voluptatem incidunt cumque in! In, omnis repellendes.'
+text.style.fontWeight = 'bold'
+
+// DIV1 // СТИЛИ
+const div1 = document.createElement('myLink')
+div1.style.display = 'flex'
+div1.style.justifyContent = 'center'
+div1.style.marginTop = '10px'
+// 1-я ссылка
+const link1 = document.createElement('a')
+link1.href = 'https://intocode.ru/'
+link1.title = 'intocode'
+link1.append(document.createTextNode('intocode'))
+link1.style.marginRight = '100px'
+// 2-я ссылка
+const link2 = document.createElement('a')
+link2.href = 'https://google.com/'
+link2.title = 'google'
+link2.append(document.createTextNode('google'))
+link2.style.marginRight = '100px'
+// 3-я ссылка
+const link3 = document.createElement('a')
+link3.href = 'https://youtube.com/'
+link3.title = 'youtube'
+link3.append(document.createTextNode('youtube'))
+// ВЫВОД
+div1.append(link1, link2, link3)
+div.append(text)
+document.body.prepend(div, div1)
+</script>
+</html>
